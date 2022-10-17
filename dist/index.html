@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>To-Do</title>
+</head>
+
+<body>
+    <header>
+        <h1>To-Do</h1>
+    </header>
+    <div id="content" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+    </div>
+    <div id="modalContainer">
+        <div class="modal fade" id="taskModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+            aria-labelledby="taskModal" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="taskModalLabel">New To-Do</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-body">
+                            <h6>New Task:</h6>
+                            <textarea style="resize: none;" name="taskTitle" id="taskTitle" cols="30"
+                                rows="2"></textarea>
+                        </div>
+                        <input type="date" name="taskDate" id="taskDate">
+                        <div class="addbtn-body">
+                            <button class="btn btn-primary" id="addTask">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="modalToggle" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#taskModal">
+        +
+    </button>
+</body>
+<script src="main.js"></script>
+
+</html>
